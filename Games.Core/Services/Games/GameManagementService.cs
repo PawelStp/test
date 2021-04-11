@@ -45,6 +45,7 @@ namespace Games.Core.Services
             var game = await _gameRepository.Get(id, cancellationToken);
             if (game == null) throw new ValidationException(Error.NotFound);
 
+
             await _gameRepository.Delete(game, cancellationToken);
         }
     }
